@@ -1,9 +1,11 @@
 angular.module('owmLibrary', [])
 
+  //var appID = '74253cc1effc84144ca3e21891576000';
+
   .constant('OWM_API_PREFIX', 'http://api.openweathermap.org/data/2.5/forecast')
-  .constant('OWM_LAT_LNG_PATH', '/?lat={{ lat }}&lon={{ lng }}')
-  .constant('OWM_CITY_PATH', '/?id={{ id }}')
-  .constant('OWM_FIND_CITY_PATH', '/?q={{ q }}')
+  .constant('OWM_LAT_LNG_PATH', '/?lat={{ lat }}&lon={{ lng }}&APPID=74253cc1effc84144ca3e21891576000')
+  .constant('OWM_CITY_PATH', '/?id={{ id }}&APPID=74253cc1effc84144ca3e21891576000')
+  .constant('OWM_FIND_CITY_PATH', '/?q={{ q }}&APPID=74253cc1effc84144ca3e21891576000')
   .constant('OWM_CITIES_JSON_FILE', './owm-cities.json')
 
   .factory('owmUSCities', function($http, $q, OWM_CITIES_JSON_FILE) {
